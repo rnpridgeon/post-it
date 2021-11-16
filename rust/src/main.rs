@@ -1,17 +1,9 @@
-
-use std::{env, net::TcpListener};
+use std::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> post_it::Result<()> {
-    let args: Vec<String> = env::args().collect();
-    
-    if args.len() != 2 {
-        panic!("Usage: post-it address");
-    }
+    // Binding to all interfaces to satisfy docker-compose environment
+    let listener = TcpListener::bind("0.0.0.0:3001")?;
 
-    let listener = TcpListener::bind(&args[1])?;
-
-    post_it::run(listener).await?;
-    
-    Ok(())
+    post_it::run(listener).await
 }
