@@ -3,7 +3,7 @@ services:
   front:
     image: fe
     build: 
-      context: ./ts2
+      context: ./ts
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.front.rule=PathPrefix(`/`)"
