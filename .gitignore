@@ -1,1 +1,23 @@
 rust/target
+
+ts/node_modules
+ts/dist
+
+
+# local env files
+ts/.env.local
+ts/.env.*.local
+
+# Log files
+ts/npm-debug.log*
+ts/yarn-debug.log*
+ts/yarn-error.log*
+ts/pnpm-debug.log*
+
+# Editor directories and files
+.vscode
+ts/*.suo
+ts/*.ntvs*
+ts/*.njsproj
+ts/*.sln
+ts/*.sw?
