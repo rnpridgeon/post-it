@@ -5,8 +5,10 @@ Post-It is a "Hello World" type application which was used to familiarize myself
 ## Deploy both front end and back-end services using docker-compose
 
 ```
-$ docker-compose up -d
+$ docker-compose up -d 
 ```
+
+Post-IT UI available from a browser at http://localhost
 
 ## Run backend integration tests 
 
